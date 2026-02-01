@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-dark text-white;
+}
+
+/* Estilos personalizados para inputs */
+input, select, textarea {
+  @apply bg-dark-light text-white border-gray-dark;
+}
+
+input:focus, select:focus, textarea:focus {
+  @apply ring-primary border-primary;
+}
+
+input::placeholder {
+  @apply text-gray;
+}
