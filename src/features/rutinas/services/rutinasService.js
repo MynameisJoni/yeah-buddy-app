@@ -1,10 +1,11 @@
 import { API_ENDPOINT, PROJECT_ID, DATABASE_ID, COLLECTIONS } from "../../../config/appwrite";
 
 export const rutinasService = {
-    //GET rutinas
-    async getAll(){
+    //GET rutinas por usuario
+    async getAll(usuarioId){
         try{
-            const url = `${API_ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTIONS.RUTINAS}/documents?queries[]=equal("usuarioId","${usuarioId}")`;
+            const url = `${API_ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTIONS.RUTINAS}/documents`;
+
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
@@ -18,7 +19,9 @@ export const rutinasService = {
             }
 
             const data = await response.json();
-            return data.documents;
+            
+            // Filtrar manualmente por usuarioId
+            return data.documents.filter(doc => doc.usuarioId === usuarioId);
         } catch(error){
             throw new Error(error.message || "Error al cargar las rutinas: " + error.message);
         }
@@ -47,9 +50,10 @@ export const rutinasService = {
     },
 
     // POST rutina
-    async create(){
+    async create(data){
         try{
-            url = `${API_ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTIONS.RUTINAS}/documents`;
+            const url = `${API_ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTIONS.RUTINAS}/documents`;
+            
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -63,7 +67,8 @@ export const rutinasService = {
             });
 
             if(!response.ok){
-                throw new Error("Error al crear la rutina");
+                const errorData = await response.json();
+                throw new Error(errorData.message || "Error al crear la rutina");
             }
             return await response.json();
         }catch (error){

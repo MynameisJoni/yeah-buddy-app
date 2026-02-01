@@ -2,7 +2,7 @@ import { API_ENDPOINT, PROJECT_ID, DATABASE_ID, COLLECTIONS } from "../../../con
 
 export const perfilService = {
     // PATCH perfil usuario
-    async update (){
+    async update (usuarioId, data){
         try{
             const url = `${API_ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTIONS.USUARIOS}/documents/${usuarioId}`;
             const response = await fetch(url, {
