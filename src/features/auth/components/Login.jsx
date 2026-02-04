@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
-import Swal from "sweetalert2"; // para modales menos pesados
+import Swal from "sweetalert2";
 
 export default function Login(){
     const [ email, setEmail ] = useState("");
@@ -50,7 +50,7 @@ export default function Login(){
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                        <label htmlFor="email" className="blocl text-sm font-medium text-gray-light mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-light mb-2">
                             Email:
                         </label>
                         <input

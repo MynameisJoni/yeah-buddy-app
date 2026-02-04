@@ -7,7 +7,7 @@ import EjerciciosPage from './pages/EjerciciosPage';
 import RutinasPage from './pages/RutinasPage';
 import PerfilPage from './pages/PerfilPage';
 
-export default function APP(){
+export default function App(){
   return (
     <BrowserRouter>
       <Routes>
@@ -18,11 +18,7 @@ export default function APP(){
             <Home />
           </ProtectedRoute>
         } />
-        <Route path="/ejercicios" element={
-          <ProtectedRoute>
-            <EjerciciosPage />
-          </ProtectedRoute>
-        } />
+        <Route path="/ejercicios" element={<EjerciciosPage />} />
         <Route path="/rutinas" element={
           <ProtectedRoute>
             <RutinasPage />

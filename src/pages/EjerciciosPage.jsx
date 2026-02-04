@@ -182,22 +182,6 @@ export default function EjerciciosPage(){
         }
     };
 
-    const handleVerDetalle = (ejercicio) => {
-        Swal.fire({
-            title: ejercicio.nombre,
-            html: `
-                <div class="text-left">
-                    <p class="mb-2"><strong>Grupo:</strong> ${ejercicio.grupoMuscular}</p>
-                    <p class="mb-2"><strong>Descripción:</strong></p>
-                    <p class="text-gray-400">${ejercicio.descripcion || 'Sin descripción'}</p>
-                </div>
-            `,
-            icon: 'info',
-            background: '#2A2A2A',
-            color: '#fff',
-            confirmButtonColor: '#DC2626'
-        });
-    };
 
     if(loading){
         return(

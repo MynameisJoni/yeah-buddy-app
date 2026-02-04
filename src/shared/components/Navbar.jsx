@@ -1,4 +1,4 @@
-import { Link, useActionData, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../features/auth/context/AuthContext";
 import Swal from "sweetalert2";
 
@@ -12,7 +12,7 @@ export default function Navbar(){
             title: 'Cerrar Sesión??',
             text: "Estás a un paso de salir de la mejor app de fitness de la historia!!",
             icon: 'question',
-            showCancelButon: true,
+            showCancelButton: true,
             confirmButtonText: 'Si, flojera...',
             cancelButtonText: 'Una más...',
             background: '#2A2A2A',
@@ -31,7 +31,6 @@ export default function Navbar(){
         <nav className="bg-dark-lignt border-b border-gray-dark">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    "Logo de Ronnie?"
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center space-x-2">
                             <span className="text-xl font-bold text-white">

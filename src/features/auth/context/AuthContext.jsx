@@ -122,7 +122,6 @@ export function AuthProvider({children}){
                     peso: null,
                     altura: null,
                     objetivo: null,
-                    edad: null,
                     email,
                     password
                 }
