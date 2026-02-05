@@ -24,11 +24,12 @@ Cada usuario será libre de crear tantos ejercicios como rutinas desee. Los ejer
         - [LOGIN](#login)
         - [REGISTER](#register)
         - [EJERCICIOS Y RUTINAS PAGE](#ejercicios-y-rutinas-page)
-
-
+- [INSTALACIÓN](#instalación)
+- [MANUAL DE USO](#manual-de-uso)
+- [FIGMA](#figma)
+- [REPOSITORIO GITHUB](#repositorio-github)
 
 ## TECNOLOGÍAS USADAS
-
 
 ### REACT
 
@@ -37,7 +38,6 @@ El proyecto se centrará en REACT para el apartado visual y la conexión con el 
 ### APPWRITE
 
 Se empleará esta API para gestionar la base de datos. A ella nos conectaremos desde REACT vía API.
-
 
 
 ### BASE DE DATOS
@@ -642,3 +642,52 @@ Y ya tendríamos la primera rutina creada, pero para ver la magia, vamos a crear
 Con el conteo de las rutinas se puede ver que en home el contador ha subido a dos rutinas:
 
 ![Home con rutinas](./public/homerutinas.png)
+
+De vuelta a la página de rutinas llega el momento de editar. Para ello pulsamos el botón de editar en la rutina que queramos modificar:
+
+![Editar rutina](./public/editarrutina.png)
+
+Se abre un modal con la selección anterior. Vamos a modicar algunos campos:
+
+![Editar rutina 2](./public/editarrutina2.png)
+
+Al guardar, para ver los cambios basta con pulsar en Ver Detalle:
+
+![Ver detalle rutina editada](./public/editarrutina3.png)
+
+Por último, para eliminar la rutina, se pulsa el botón de eliminar y se confirma la acción:
+
+![Eliminar rutina](./public/eliminarrutina.png)
+
+Tras eliminar, se vuelve a la página de rutinas con la rutina eliminada:
+
+![Rutina eliminada](./public/rutinaseliminar.png)
+
+Y en Home se descuenta una rutina de la tarjeta:
+
+![Home rutina eliminada](./public/home3.png)
+
+Por último, quedaría el perfil. En la captura anterior se ve que no existen datos, asi que vamos a ver la página e introducir algunos datos:
+
+![Perfil](./public/perfil.png)
+
+> [!NOTE]
+> En principio el formulario viene vacío hasta que el usuario no lo complete. En este caso adjuntamos la captura con los datos a introducir
+
+Una vez guardados los cambios, se puede ver que la tarjeta de perfil en home se ha actualizado:
+
+![Home perfil actualizado](./public/home4.png)
+
+También se puede apreciar que el nombre del usuario ha cambiado en la página principal y en el header.
+
+Por último, solo queda el logout. Simplemente pulsar en salir, confirmar y nos devuelve a la página de login:
+
+![Logout](./public/cerrarsesion.png)
+
+## FIGMA
+
+https://www.figma.com/design/XEHG98k8mUu5ANGqDskDE6/Proyecto-DAD?node-id=0-1&t=rCb3HTV2SOBqLY4v-1
+
+## REPOSITORIO GITHUB
+
+https://github.com/MynameisJoni/yeah-buddy-app?tab=readme-ov-file#ejercicios-y-rutinas-page
